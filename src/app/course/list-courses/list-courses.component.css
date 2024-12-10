@@ -1,0 +1,21 @@
+/* Alinear el texto en el encabezado */
+h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Ajustar el ancho de las columnas para que se parezcan más a la figura */
+  table thead th:nth-child(1) {
+    width: 5%; /* Columna de # */
+  }
+  
+  table thead th:nth-child(2) {
+    width: 40%; /* Columna de Nombre */
+  }
+  
+  table thead th:nth-child(3),
+  table thead th:nth-child(4),
+  table thead th:nth-child(5) {
+    width: 15%;
+  }
+  
