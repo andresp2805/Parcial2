@@ -6,10 +6,11 @@ import { Curso } from '../course';
   selector: 'app-listar-cursos',
   templateUrl: './list-courses.component.html',
   styleUrls: ['./list-courses.component.css'],
-  standalone: false // mantener en false si se usa un module tradicional
+  standalone: false
 })
 export class ListCoursesComponent implements OnInit {
   cursos: Curso[] = [];
+  selectedCurso?: Curso;
 
   constructor(private cursoService: CursoService) {}
 
@@ -29,5 +30,8 @@ export class ListCoursesComponent implements OnInit {
       .filter(curso => curso.offers_certificate)
       .map(curso => curso.id);
   }
-}
 
+  onSelect(curso: Curso): void {
+    this.selectedCurso = curso;
+  }
+}
